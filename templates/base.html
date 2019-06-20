@@ -5,14 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Material Icons CDN Link-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Materialize 0.100.2 CDN Link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!--Font Awesome 5.5.0 CDN Link-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!--My Custom Css Link-->
     <link rel="stylesheet" href="{{url_for('static', filename='scss/main.css')}}">
-    <title>Document</title>
+    <!--Page Title-->
+    <title>Recipe Book</title>
 </head>
 
 <body>
     <header>
+        <!--Navigation-->
         <nav>
             <div class="nav-wrapper">
                 <a href="#!" class="brand-logo">Recipe Book</a>
@@ -29,12 +37,20 @@
                 </ul>
             </div>
         </nav>
+        <!--/Navigation-->
     </header>
 
-    {% block content %} {% endblock %}
+    <main>
 
+        {% block content %} {% endblock %}
+
+    </main>
+
+    <!--jQuery CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--Materialize JS CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!--Nav JS Link-->
     <script src="{{url_for('static', filename='js/nav.js')}}"></script>
 </body>
 

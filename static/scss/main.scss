@@ -1,3 +1,108 @@
-.nav-wrapper {
-    background-color: rgb(0, 204, 255);
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kalam:400,700&display=swap');
+@import "helpers/_variables.scss";
+
+body {
+    font-family: $primary-font;
+    color: $brand-color;
+}
+
+/*----------Navigation----------*/
+
+nav {
+    background-color: #ffffff;
+    .nav-wrapper .brand-logo {
+        margin-left: 5px;
+        font-size: 25px;
+        color: $brand-color;
+    }
+}
+
+nav ul a {
+    color: $brand-color;
+}
+
+nav .button-collapse i {
+    color: $brand-color;
+}
+
+/*-----------------Introduction------------------*/
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 65vh;
+}
+
+.background-image {
+    background: url(https://www.sanpellegrino.com/media//international/spyc2019/Sanpellegrino_SPYC_teaser_POST_01.jpg) no-repeat center center scroll; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 65vh;
+    margin-bottom: 50px;
+}
+
+h1, h4 {
+    text-align: center;
+    color: #ffffff;
+    span {
+        color: $brand-color;
+    }
+}
+
+h1 {
+    font-size: 50px;
+    padding-top: 100px;
+    margin: 0;
+    font-family: $logo-font;
+}
+
+h4 {
+    font-size: 16px;
+    padding: 0 30px;
+}
+
+/*-------------------Recipe Cards-----------------*/
+
+.card {
+    cursor: pointer;
+    &:hover {
+        background-color: pink;
+    }
+    .card-content {
+        padding: 10px 24px;
+        span {
+            text-align: center;
+        }
+        .course {
+            display: block;
+            text-align: center;
+        }
+        p {
+            display: inline-block;
+            margin: 5px 5px;
+            color: $light-brand-color;
+            i {
+                font-size: 1.3em;
+                vertical-align: sub;
+            }
+        }
+        .card-image {
+            text-align: center;
+            font-size: 50px;
+        }
+    }
+}
+
+/*----------------Media Queries for medium and large screens---------------*/
+
+
+@media (min-width: 576px) {
+    h1 {
+        font-size: 60px;
+    }
+    h4 {
+        font-size: 20px;
+    }    
 }

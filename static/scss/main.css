@@ -1,4 +1,82 @@
-.nav-wrapper {
-  background-color: #00ccff; }
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kalam:400,700&display=swap");
+body {
+  font-family: "Lato", sans-serif;
+  color: #262626; }
+
+/*----------Navigation----------*/
+nav {
+  background-color: #ffffff; }
+  nav .nav-wrapper .brand-logo {
+    margin-left: 5px;
+    font-size: 25px;
+    color: #262626; }
+
+nav ul a {
+  color: #262626; }
+
+nav .button-collapse i {
+  color: #262626; }
+
+/*-----------------Introduction------------------*/
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 65vh; }
+
+.background-image {
+  background: url(https://www.sanpellegrino.com/media//international/spyc2019/Sanpellegrino_SPYC_teaser_POST_01.jpg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 65vh;
+  margin-bottom: 50px; }
+
+h1, h4 {
+  text-align: center;
+  color: #ffffff; }
+  h1 span, h4 span {
+    color: #262626; }
+
+h1 {
+  font-size: 50px;
+  padding-top: 100px;
+  margin: 0;
+  font-family: "Kalam", cursive; }
+
+h4 {
+  font-size: 16px;
+  padding: 0 30px; }
+
+/*-------------------Recipe Cards-----------------*/
+.card {
+  cursor: pointer; }
+  .card:hover {
+    background-color: pink; }
+  .card .card-content {
+    padding: 10px 24px; }
+    .card .card-content span {
+      text-align: center; }
+    .card .card-content .course {
+      display: block;
+      text-align: center; }
+    .card .card-content p {
+      display: inline-block;
+      margin: 5px 5px;
+      color: #949494; }
+      .card .card-content p i {
+        font-size: 1.3em;
+        vertical-align: sub; }
+    .card .card-content .card-image {
+      text-align: center;
+      font-size: 50px; }
+
+/*----------------Media Queries for medium and large screens---------------*/
+@media (min-width: 576px) {
+  h1 {
+    font-size: 60px; }
+
+  h4 {
+    font-size: 20px; } }
 
 /*# sourceMappingURL=main.css.map */

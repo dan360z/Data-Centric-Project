@@ -1,16 +1,52 @@
 {% extends 'base.html' %} {% block content %}
 
-{% for recipe in recipes %}
+<div class="background-image">
+    <div class="overlay">
+        <!--Main logo and introduction-->
+        <h1>Recipe <span>Book</span></h1>
+        <h4>Welcome to Recipe Book!<br />
+            Browse through our recipes. You also add your own.
+        </h4>
+        <!--/Main logo and introduction-->
+    </div>
+</div>
 
-    {{recipe.name}}
-    {{recipe.author}}
-    {{recipe.cusine_name}}
-    {{recipe.course_name}}
-    {{recipe.prep_time}}
-    {{recipe.cooking_time}}
-    {{recipe.ingredients}}
-    
+<div class="container">
+    <!--Recipe Cards-->
+    <div class="row">
 
-    {% endfor %}
+        {% for recipe in recipes %}
 
-{% endblock %}    
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">{{recipe.name}}</span>
+                    <div class="card-image">
+                        {% if recipe.course_name == 'Breakfast' %}
+                        <i class="fas fa-coffee"></i>
+                        {% elif recipe.course_name == 'Lunch' %}
+                        <i class="fas fa-apple-alt"></i>
+                        {% elif recipe.course_name == 'Dinner' %}
+                        <i class="fas fa-utensils"></i>
+                        {% else %}
+                        <i class="fas fa-cookie"></i>
+                        {% endif %}
+                    </div>
+                    <p class="course">{{recipe.course_name}}</p>
+                    <p><i class="tiny material-icons">whatshot</i> Calories (kcal): {{recipe.cals}}</p>
+                    <p><i class="tiny material-icons">access_time</i> {{recipe.total_time}}</p>
+                </div>
+            </div>
+        </div>
+
+        {% if loop.index % 3 == 0 %}
+    </div>
+    <div class="row">
+
+        {% endif %}
+        {% endfor %}
+        
+    </div>
+    <!--/Recipe Cards-->
+</div>
+{% endblock %}
