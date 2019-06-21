@@ -3,8 +3,8 @@
 <div class="background-image">
     <div class="overlay">
         <!--Main logo and introduction-->
-        <h1>Recipe <span>Book</span></h1>
-        <h4>Welcome to Recipe Book!<br />
+        <h1 class="title">Recipe <span>Book</span></h1>
+        <h4 class="intro">Welcome to Recipe Book!<br />
             Browse through our recipes. You also add your own.
         </h4>
         <!--/Main logo and introduction-->
@@ -12,6 +12,7 @@
 </div>
 
 <div class="container">
+    <h5>Recipes</h5>
     <!--Recipe Cards-->
     <div class="row">
 
@@ -19,23 +20,25 @@
 
         <div class="col s12 m4">
             <div class="card">
-                <div class="card-content">
-                    <span class="card-title">{{recipe.name}}</span>
-                    <div class="card-image">
-                        {% if recipe.course_name == 'Breakfast' %}
-                        <i class="fas fa-coffee"></i>
-                        {% elif recipe.course_name == 'Lunch' %}
-                        <i class="fas fa-apple-alt"></i>
-                        {% elif recipe.course_name == 'Dinner' %}
-                        <i class="fas fa-utensils"></i>
-                        {% else %}
-                        <i class="fas fa-cookie"></i>
-                        {% endif %}
+                <a href="{{url_for('show_recipe', recipe_id=recipe._id)}}">
+                    <div class="card-content">
+                        <span class="card-title">{{recipe.name}}</span>
+                        <div class="card-image">
+                            {% if recipe.course_name == 'Breakfast' %}
+                            <i class="fas fa-coffee icon breakfast"></i>
+                            {% elif recipe.course_name == 'Lunch' %}
+                            <i class="fas fa-apple-alt icon lunch"></i>
+                            {% elif recipe.course_name == 'Dinner' %}
+                            <i class="fas fa-utensils icon dinner"></i>
+                            {% else %}
+                            <i class="fas fa-cookie icon desert"></i>
+                            {% endif %}
+                        </div>
+                        <p class="course">{{recipe.course_name}}</p>
+                        <p><i class="tiny material-icons">whatshot</i> Calories (kcal): {{recipe.cals}}</p>
+                        <p><i class="tiny material-icons">access_time</i> {{recipe.total_time}}</p>
                     </div>
-                    <p class="course">{{recipe.course_name}}</p>
-                    <p><i class="tiny material-icons">whatshot</i> Calories (kcal): {{recipe.cals}}</p>
-                    <p><i class="tiny material-icons">access_time</i> {{recipe.total_time}}</p>
-                </div>
+                </a>
             </div>
         </div>
 
@@ -45,7 +48,7 @@
 
         {% endif %}
         {% endfor %}
-        
+
     </div>
     <!--/Recipe Cards-->
 </div>

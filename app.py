@@ -10,13 +10,19 @@ app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
 
 mongo = PyMongo(app)
 
+'''This function displays all the recipes on the landing page'''
 @app.route('/')
 @app.route('/get_recipes')
 def get_recipes():
     return render_template("recipes.html", recipes=mongo.db.Recipes.find())
+
+@app.route('/show_recipe/<recipe_id>')
+def show_recipe(recipe_id):
+    this_recipe = mongo.db.Recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("fullrecipe.html", recipe=this_recipe)
+ 
     
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP', '0.0.0.0'),
             port=int(os.environ.get('PORT', '5000')),
             debug=True)
-

@@ -1,0 +1,59 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+
+    <!--Recipe Info-->
+    <h2>{{recipe.name}}</h2>
+    <div class="info-wrapper">
+        <p><span>A recipe by:</span> {{recipe.author}}</p>
+        <Hr>
+        <p><span>Cusine:</span> {{recipe.cuisine_name}}</p>
+        <Hr>
+        <p>{% if recipe.course_name == 'Breakfast' %}
+            <i class="fas fa-coffee icon breakfast"></i>
+            {% elif recipe.course_name == 'Lunch' %}
+            <i class="fas fa-apple-alt icon lunch"></i>
+            {% elif recipe.course_name == 'Dinner' %}
+            <i class="fas fa-utensils icon dinner"></i>
+            {% else %}
+            <i class="fas fa-cookie icon desert"></i>
+            {% endif %}<span>Course:</span> {{recipe.course_name}}</p>
+        <Hr>
+        <p><i class="tiny material-icons icon prep">access_time</i> <span>Prep:</span> {{recipe.prep}} Mins
+            <span>Cook:</span>
+            {{recipe.cook}} Mins</p>
+        <Hr>
+        <p><i class="tiny material-icons icon cals">whatshot</i> <span>Calories (kcal):</span> {{recipe.cals}}</p>
+    </div>
+    <!--/Recipe Info-->
+
+    <div class="row instructions">
+        <!--Ingredients List-->
+        <div class="col s12 m6">
+            <h5>Ingredients</h5>
+            <ul>
+                {% for ingredient in recipe.ingredients %}
+
+                <li>{{ingredient}}</li>
+
+                {% endfor %}
+            </ul>
+        </div>
+        <!--/Ingredients List-->
+
+        <!--Method List-->
+        <div class="col s12 m6">
+            <h5>Method</h5>
+            <ul>
+                {% for method in recipe.method %}
+
+                <li><span>{{loop.index}}.</span> {{method}}</li>
+
+                {% endfor %}
+            </ul>
+        </div>
+        <!--/Method List-->
+    </div>
+
+</div>
+{% endblock %}

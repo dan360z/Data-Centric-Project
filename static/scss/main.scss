@@ -1,29 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Kalam:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kalam:300,400,700&display=swap');
 @import "helpers/_variables.scss";
 
 body {
     font-family: $primary-font;
-    color: $brand-color;
+    color: $text-color;
 }
 
 /*----------Navigation----------*/
 
 nav {
     background-color: #ffffff;
-    .nav-wrapper .brand-logo {
+    .brand-logo {
+        color: $text-color;
+        font-size: 28px;
+    }
+    .nav-wrapper .text-logo {
         margin-left: 5px;
         font-size: 25px;
-        color: $brand-color;
+        color: $text-color;
     }
 }
 
 nav ul a {
-    color: $brand-color;
+    color: $text-color;
 }
 
 nav .button-collapse i {
-    color: $brand-color;
+    color: $text-color;
 }
 
 /*-----------------Introduction------------------*/
@@ -43,23 +47,25 @@ nav .button-collapse i {
     margin-bottom: 50px;
 }
 
-h1, h4 {
-    text-align: center;
+.title {
     color: #ffffff;
     span {
-        color: $brand-color;
+        color: $text-color;
     }
 }
 
-h1 {
+h1, h2 {
+    text-align: center;
     font-size: 50px;
     padding-top: 100px;
     margin: 0;
     font-family: $logo-font;
 }
 
-h4 {
-    font-size: 16px;
+.intro {
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
     padding: 0 30px;
 }
 
@@ -68,12 +74,21 @@ h4 {
 .card {
     cursor: pointer;
     &:hover {
-        background-color: pink;
+        background-color: #fafafa;
+        transform: rotate(1deg);
+        -moz-transition: all 0.30s ease-in-out;
+        -webkit-transition: all 0.30s ease-in-out;
+        -o-transition: all 0.30s ease-in-out;
     }
     .card-content {
         padding: 10px 24px;
         span {
+            color: $text-color;
             text-align: center;
+        }
+        .card-title {
+            font-family: $logo-font;
+            font-weight: 300;
         }
         .course {
             display: block;
@@ -82,7 +97,7 @@ h4 {
         p {
             display: inline-block;
             margin: 5px 5px;
-            color: $light-brand-color;
+            color: $light-text-color;
             i {
                 font-size: 1.3em;
                 vertical-align: sub;
@@ -91,9 +106,89 @@ h4 {
         .card-image {
             text-align: center;
             font-size: 50px;
+            color: $text-color;
         }
     }
 }
+
+/*----------------Icon Colors---------------*/
+
+.icon {
+    border: 0.5px solid #2626266b;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.breakfast {
+    background-color: #a0ffb9;
+    color: #436a4d;
+}
+
+.lunch {
+    background-color: #f5ffa0;
+    color: #656241;
+}
+
+.dinner {
+    background-color: #ffb2a0;
+    color: #6a4a43;
+}
+
+.desert {
+    background-color: #c9a0ff;
+    color: #5b436a;
+}
+
+/*.snack {
+    background-color: #8ad1fa;
+    color: #434f6a;
+}
+
+.beverage {
+    background-color: #a0ffb9;
+    color: #436a4d;
+}*/
+
+.prep {
+    background-color: #9ee4ff;
+    color: #01667d;
+}
+
+.cals {
+    background-color: #ffbfbf;
+    color: #ff0101;
+}
+/*----------------Full Recipe Page---------------*/
+
+.info-wrapper {
+    //background-color: $brand-color;
+    padding: 1px 15px;
+    border-radius: 10px;
+    margin: 55px 0 15px 0;
+    span {
+        font-weight: 700;
+    }
+    i {
+        font-size: 1.3em;
+        vertical-align: sub;
+    }
+}
+
+.instructions {
+    background-color: #fafafa;
+    h5 {
+        font-family: $logo-font;
+    }
+    
+    li {
+        margin: 8px 0;
+        span {
+            font-weight: 700;
+        }
+    }
+}
+
 
 /*----------------Media Queries for medium and large screens---------------*/
 
@@ -101,8 +196,5 @@ h4 {
 @media (min-width: 576px) {
     h1 {
         font-size: 60px;
-    }
-    h4 {
-        font-size: 20px;
-    }    
+    }   
 }
