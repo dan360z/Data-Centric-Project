@@ -13,9 +13,20 @@
 
 <div class="container">
     <h5>Recipes</h5>
+</div>
+<div class="course-btns-wrapper">
+    <a href="{{url_for('get_recipes')}}" class="waves-effect waves-light btn all">All</a>
+    <a href="{{url_for('get_course', course='Breakfast')}}" class="waves-effect waves-light btn breakfast">Breakfast</a>
+    <a href="{{url_for('get_course', course='Lunch')}}" class="waves-effect waves-light btn lunch">Lunch</a>
+    <a href="{{url_for('get_course', course='Dinner')}}" class="waves-effect waves-light btn dinner">Dinner</a>
+    <a href="{{url_for('get_course', course='Desert')}}" class="waves-effect waves-light btn desert">Desert</a>
+    <a href="{{url_for('get_course', course='Snack')}}" class="waves-effect waves-light btn snack">Snack</a>
+    <a href="{{url_for('get_course', course='Beverage')}}" class="waves-effect waves-light btn beverage">Beverage</a>
+</div>
+
+<div class="container">
     <!--Recipe Cards-->
     <div class="row">
-
         {% for recipe in recipes %}
 
         <div class="col s12 m4">

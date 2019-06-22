@@ -14,6 +14,7 @@ nav {
     .brand-logo {
         color: $text-color;
         font-size: 28px;
+        font-family: $logo-font;
     }
     .nav-wrapper .text-logo {
         margin-left: 5px;
@@ -69,6 +70,17 @@ h1, h2 {
     padding: 0 30px;
 }
 
+.course-btns-wrapper {
+    text-align: center;
+    margin: 12px 0;
+    overflow: auto;
+    white-space: nowrap;
+    a {
+        margin: 0 7px;
+        padding: 0 12px;
+    }
+}
+
 /*-------------------Recipe Cards-----------------*/
 
 .card {
@@ -111,13 +123,18 @@ h1, h2 {
     }
 }
 
-/*----------------Icon Colors---------------*/
+/*----------------Icon and Button Colors---------------*/
 
 .icon {
     border: 0.5px solid #2626266b;
     border-radius: 5px;
     padding: 10px;
     font-size: 25px;
+}
+
+.all {
+    background-color: #ffa8e0;
+    color: #885982;
 }
 
 .breakfast {

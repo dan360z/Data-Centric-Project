@@ -9,7 +9,8 @@ nav {
   background-color: #ffffff; }
   nav .brand-logo {
     color: #262626;
-    font-size: 28px; }
+    font-size: 28px;
+    font-family: "Kalam", cursive; }
   nav .nav-wrapper .text-logo {
     margin-left: 5px;
     font-size: 25px;
@@ -53,6 +54,15 @@ h1, h2 {
   font-size: 20px;
   padding: 0 30px; }
 
+.course-btns-wrapper {
+  text-align: center;
+  margin: 12px 0;
+  overflow: auto;
+  white-space: nowrap; }
+  .course-btns-wrapper a {
+    margin: 0 7px;
+    padding: 0 12px; }
+
 /*-------------------Recipe Cards-----------------*/
 .card {
   cursor: pointer; }
@@ -85,12 +95,16 @@ h1, h2 {
       font-size: 50px;
       color: #262626; }
 
-/*----------------Icon Colors---------------*/
+/*----------------Icon and Button Colors---------------*/
 .icon {
   border: 0.5px solid #2626266b;
   border-radius: 5px;
   padding: 10px;
   font-size: 25px; }
+
+.all {
+  background-color: #ffa8e0;
+  color: #885982; }
 
 .breakfast {
   background-color: #a0ffb9;

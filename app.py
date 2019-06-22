@@ -16,6 +16,12 @@ mongo = PyMongo(app)
 def get_recipes():
     return render_template("recipes.html", recipes=mongo.db.Recipes.find())
 
+@app.route('/get_course/<course>')
+def get_course(course):
+    recipes = mongo.db.Recipes.find({"course_name": course})
+    return render_template("recipes.html", recipes=recipes)    
+
+'''This function dispalys the full recipe of which the user has clicked'''
 @app.route('/show_recipe/<recipe_id>')
 def show_recipe(recipe_id):
     this_recipe = mongo.db.Recipes.find_one({"_id": ObjectId(recipe_id)})
