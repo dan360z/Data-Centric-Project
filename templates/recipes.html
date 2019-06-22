@@ -25,13 +25,17 @@
                         <span class="card-title">{{recipe.name}}</span>
                         <div class="card-image">
                             {% if recipe.course_name == 'Breakfast' %}
-                            <i class="fas fa-coffee icon breakfast"></i>
+                            <i class="fas fa-bacon icon breakfast"></i>
                             {% elif recipe.course_name == 'Lunch' %}
                             <i class="fas fa-apple-alt icon lunch"></i>
                             {% elif recipe.course_name == 'Dinner' %}
                             <i class="fas fa-utensils icon dinner"></i>
+                            {% elif recipe.course_name == 'Desert' %}
+                            <i class="fas fa-ice-cream icon desert"></i>
+                            {% elif recipe.course_name == 'Snack' %}
+                            <i class="fas fa-cookie icon snack"></i>
                             {% else %}
-                            <i class="fas fa-cookie icon desert"></i>
+                            <i class="fas fa-cocktail icon beverage"></i>
                             {% endif %}
                         </div>
                         <p class="course">{{recipe.course_name}}</p>

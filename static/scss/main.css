@@ -108,18 +108,13 @@ h1, h2 {
   background-color: #c9a0ff;
   color: #5b436a; }
 
-/*.snack {
-    background-color: #8ad1fa;
-    color: #434f6a;
-}
+.snack {
+  background-color: #f7c990;
+  color: #776940; }
 
-.beverage {
-    background-color: #a0ffb9;
-    color: #436a4d;
-}*/
-.prep {
-  background-color: #9ee4ff;
-  color: #01667d; }
+.beverage, .prep {
+  background-color: #8defff;
+  color: #508588; }
 
 .cals {
   background-color: #ffbfbf;
@@ -130,6 +125,8 @@ h1, h2 {
   padding: 1px 15px;
   border-radius: 10px;
   margin: 55px 0 15px 0; }
+  .info-wrapper p {
+    margin: 3px 0; }
   .info-wrapper span {
     font-weight: 700; }
   .info-wrapper i {
