@@ -55,7 +55,7 @@ nav .button-collapse i {
     }
 }
 
-h1, h2 {
+h1, h3 {
     text-align: center;
     font-size: 50px;
     padding-top: 100px;
@@ -132,12 +132,12 @@ h1, h2 {
     font-size: 25px;
 }
 
-.all {
+.all, .add {
     background-color: #ffa8e0;
     color: #885982;
 }
 
-.breakfast {
+.breakfast, .submit {
     background-color: #a0ffb9;
     color: #436a4d;
 }
@@ -152,7 +152,7 @@ h1, h2 {
     color: #6a4a43;
 }
 
-.desert {
+.desert, .cuisine {
     background-color: #c9a0ff;
     color: #5b436a;
 }
@@ -192,6 +192,7 @@ h1, h2 {
 
 .instructions {
     background-color: #fafafa;
+    border-radius: 5px;
     h5 {
         font-family: $logo-font;
     }
@@ -204,6 +205,13 @@ h1, h2 {
     }
 }
 
+/*----------------Add Recipe Form---------------*/
+
+form {
+    margin-top: 55px;
+    background-color: #fafafa;
+    border-radius: 5px;
+}
 
 /*----------------Media Queries for medium and large screens---------------*/
 

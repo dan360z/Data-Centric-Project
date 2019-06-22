@@ -3,18 +3,18 @@
 <div class="container">
 
     <!--Recipe Info-->
-    <h2>{{recipe.name}}</h2>
+    <h3>{{recipe.name}}</h3>
     <div class="info-wrapper">
         <p><span>A recipe by:</span> {{recipe.author}}</p>
         <Hr>
-        <p><span>Cusine:</span> {{recipe.cuisine_name}}</p>
+        <p><i class="prefix fas fa-globe-europe icon cuisine"></i><span>Cuisine:</span> {{recipe.cuisine_name}}</p>
         <Hr>
         <p>{% if recipe.course_name == 'Breakfast' %}
             <i class="fas fa-bacon icon breakfast"></i>
             {% elif recipe.course_name == 'Lunch' %}
             <i class="fas fa-apple-alt icon lunch"></i>
             {% elif recipe.course_name == 'Dinner' %}
-            <i class="fas fa-utensils icon dinner"></i>
+            <i class="fas fa-drumstick-bite icon dinner"></i>
             {% elif recipe.course_name == 'Desert' %}
             <i class="fas fa-ice-cream icon desert"></i>
             {% elif recipe.course_name == 'Snack' %}
@@ -25,7 +25,7 @@
         <Hr>
         <p><i class="tiny material-icons icon prep">access_time</i> <span>Prep:</span> {{recipe.prep}} Mins
             <span>Cook:</span>
-            {{recipe.cook}} Mins</p>
+            {{recipe.cook}} Mins <span>Total:</span>{{recipe.total_time}}</p>
         <Hr>
         <p><i class="tiny material-icons icon cals">whatshot</i> <span>Calories (kcal):</span> {{recipe.cals}}</p>
     </div>

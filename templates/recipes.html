@@ -14,6 +14,7 @@
 <div class="container">
     <h5>Recipes</h5>
 </div>
+<!--Filter by Course Buttons-->
 <div class="course-btns-wrapper">
     <a href="{{url_for('get_recipes')}}" class="waves-effect waves-light btn all">All</a>
     <a href="{{url_for('get_course', course='Breakfast')}}" class="waves-effect waves-light btn breakfast">Breakfast</a>
@@ -23,7 +24,7 @@
     <a href="{{url_for('get_course', course='Snack')}}" class="waves-effect waves-light btn snack">Snack</a>
     <a href="{{url_for('get_course', course='Beverage')}}" class="waves-effect waves-light btn beverage">Beverage</a>
 </div>
-
+<!--/Filter by Course Buttons-->
 <div class="container">
     <!--Recipe Cards-->
     <div class="row">
@@ -40,7 +41,7 @@
                             {% elif recipe.course_name == 'Lunch' %}
                             <i class="fas fa-apple-alt icon lunch"></i>
                             {% elif recipe.course_name == 'Dinner' %}
-                            <i class="fas fa-utensils icon dinner"></i>
+                            <i class="fas fa-drumstick-bite icon dinner"></i>
                             {% elif recipe.course_name == 'Desert' %}
                             <i class="fas fa-ice-cream icon desert"></i>
                             {% elif recipe.course_name == 'Snack' %}
@@ -66,5 +67,10 @@
 
     </div>
     <!--/Recipe Cards-->
+    <div class="row">
+        <a href="{{url_for('add_recipe')}}" class="waves-effect waves-light btn add">Add Your Own
+            <i class="material-icons right">playlist_add</i>
+        </a>
+    </div>
 </div>
 {% endblock %}

@@ -1,0 +1,91 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+    <h3>Add Your Own Recipe</h3>
+    <div class="row">
+        <!--Add Recipe Form-->
+        <form action="{{url_for('insert_recipe')}}" method="POST" class="col s12">
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <input name="author" id="first_name" type="text" class="validate">
+                    <label for="full_name">Your Full Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <input name="name" id="recipe_name" type="text" class="validate">
+                    <label for="recipe_name">Recipe Name</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="prefix fas fa-utensils icon dinner"></i>
+                    <select id="course" name="course_name">
+                        <option disabled selected>Choose Course</option>
+                        {% for course in courses %}
+                        <option value="{{course.course_name}}">{{course.course_name}}</option>
+                        {% endfor %}
+
+                    </select>
+                    <label>Course</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="prefix fas fa-globe-europe icon cuisine"></i>
+                    <select id="cuisine" name="cuisine_name">
+                        <option disabled selected>Choose cuisine</option>
+                        {% for cuisine in cuisines %}
+                        <option value="{{cuisine.cuisine_name}}">{{cuisine.cuisine_name}}</option>
+                        {% endfor %}
+
+                    </select>
+                    <label>Cuisine</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <input name="prep" id="prep" type="number" class="validate">
+                    <label for="prep">Prep Time (Mins)</label>
+                </div>
+
+                <div class="input-field col s12 m6">
+                    <input name="cook" id="cook" type="number" class="validate">
+                    <label for="cook">Cook Time (Mins)</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="cals" id="cals" type="number" class="validate">
+                    <label for="cals">Calories (kcal)</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="ingredients" id="ingredients" type="text" class="validate">
+                    <label for="first_name">Ingredients (Please enter each ingredient seperated by a comma.)</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="method" id="method" type="text" class="validate">
+                    <label for="method">Method (Please enter each method seperated by a comma.)</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <button class="btn waves-effect waves-light submit" type="submit" name="action">Add Recipe
+                    <i class="material-icons right">playlist_add</i>
+                </button>
+            </div>
+
+        </form>
+        <!--Add Recipe Form-->
+    </div>
+
+    {% endblock %}
