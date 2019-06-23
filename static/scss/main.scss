@@ -162,7 +162,7 @@ h1, h3 {
     color: #776940;
 }
 
-.beverage, .prep {
+.beverage, .prep, .edit {
     background-color: #8defff;
     color: #508588;
 }
@@ -170,6 +170,11 @@ h1, h3 {
 .cals {
     background-color: #ffbfbf;
     color: #ff0101;
+}
+
+.delete {
+    background-color: #f87575;
+    color: #844747;
 }
 /*----------------Full Recipe Page---------------*/
 

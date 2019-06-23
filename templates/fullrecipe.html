@@ -59,5 +59,14 @@
         <!--/Method List-->
     </div>
 
+    <div class="row">
+        <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn edit">Edit
+            <i class="material-icons right">border_color</i>
+        </a>
+        <a class="waves-effect waves-light btn delete">Delete
+            <i class="material-icons right">delete</i>
+        </a>
+    </div>
+
 </div>
 {% endblock %}

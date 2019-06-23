@@ -1,19 +1,19 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="container">
-    <h3>Add Your Own Recipe</h3>
+    <h3>Edit Recipe</h3>
     <div class="row">
         <!--Add Recipe Form-->
-        <form action="{{url_for('insert_recipe')}}" method="POST" class="col s12">
+        <form action="{{url_for('update_recipe', recipe_id=recipe._id)}}" method="POST" class="col s12">
             <div class="row">
                 <div class="input-field col s12 m6">
-                    <input name="author" id="first_name" type="text" class="validate" required>
+                    <input value="{{recipe.author}}" name="author" id="first_name" type="text" class="validate" required>
                     <label for="full_name">Your Full Name</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12 m6">
-                    <input name="name" id="recipe_name" type="text" class="validate" required>
+                    <input value="{{recipe.name}}" name="name" id="recipe_name" type="text" class="validate" required>
                     <label for="recipe_name">Recipe Name</label>
                 </div>
             </div>
@@ -24,7 +24,11 @@
                     <select id="course" name="course_name">
                         <option disabled selected>Choose Course</option>
                         {% for course in courses %}
+                        {% if course.course_name == recipe.course_name %}
+                        <option value="{{course.course_name}}" selected>{{course.course_name}}</option>
+                        {% else %}
                         <option value="{{course.course_name}}">{{course.course_name}}</option>
+                        {% endif %}
                         {% endfor %}
 
                     </select>
@@ -37,7 +41,11 @@
                     <select id="cuisine" name="cuisine_name">
                         <option disabled selected>Choose cuisine</option>
                         {% for cuisine in cuisines %}
+                        {% if cuisine.cuisine_name == recipe.cuisine_name %}
+                        <option value="{{cuisine.cuisine_name}}" selected>{{cuisine.cuisine_name}}</option>
+                        {% else %}
                         <option value="{{cuisine.cuisine_name}}">{{cuisine.cuisine_name}}</option>
+                        {% endif %}
                         {% endfor %}
 
                     </select>
@@ -47,45 +55,47 @@
 
             <div class="row">
                 <div class="input-field col s12 m6">
-                    <input name="prep" id="prep" type="number" class="validate" required>
+                    <input value="{{recipe.prep}}" name="prep" id="prep" type="number" class="validate" required>
                     <label for="prep">Prep Time (Mins)</label>
                 </div>
 
                 <div class="input-field col s12 m6">
-                    <input name="cook" id="cook" type="number" class="validate" required>
+                    <input value="{{recipe.cook}}" name="cook" id="cook" type="number" class="validate" required>
                     <label for="cook">Cook Time (Mins)</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input name="cals" id="cals" type="number" class="validate" required>
+                    <input value="{{recipe.cals}}" name="cals" id="cals" type="number" class="validate" required>
                     <label for="cals">Calories (kcal)</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input name="ingredients" id="ingredients" type="text" class="validate" required>
+                    <input value="{% for ingredient in recipe.ingredients %} {{ingredient}}. {% endfor %}"
+                        name="ingredients" id="ingredients" type="text" class="validate" required>
                     <label for="first_name">Ingredients (Please enter each ingredient seperated with a full stop.)</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input name="method" id="method" type="text" class="validate" required>
+                    <input value="{% for method in recipe.method %} {{method}}. {% endfor %}" name="method" id="method"
+                        type="text" class="validate" required>
                     <label for="method">Method (Please enter each method seperated with a full stop.)</label>
                 </div>
             </div>
 
             <div class="row">
-                <button class="btn waves-effect waves-light submit" type="submit" name="action">Add Recipe
-                    <i class="material-icons right">playlist_add</i>
+                <button class="btn waves-effect waves-light submit" type="submit" name="action">Update
+                    <i class="material-icons right">update</i>
                 </button>
             </div>
 
         </form>
-        <!--Add Recipe Form-->
+        <!--Edit Recipe Form-->
     </div>
 
     {% endblock %}
