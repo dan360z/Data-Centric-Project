@@ -53,8 +53,8 @@ then redirects back to recipes.html to view the newly added recipe. prep and coo
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     
-    ingredients = request.form["ingredients"].split(".")
-    method = request.form["method"].split(".")
+    ingredients = request.form["ingredients"].split("\n")
+    method = request.form["method"].split("\n")
     
     int_prep = int(request.form["prep"])
     int_cook = int(request.form["cook"])
@@ -80,6 +80,7 @@ def insert_recipe():
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
     this_recipe = mongo.db.Recipes.find_one({"_id": ObjectId(recipe_id)})
+
     return render_template("editrecipe.html", recipe=this_recipe, courses=mongo.db.Course.find(), cuisines=mongo.db.Cuisine.find())
 
 
@@ -87,8 +88,8 @@ def edit_recipe(recipe_id):
 @app.route('/update_recipe/<recipe_id>', methods=['POST'])
 def update_recipe(recipe_id):
 
-    ingredients = request.form["ingredients"].split(".")
-    method = request.form["method"].split(".")
+    ingredients = request.form["ingredients"].split("\n")
+    method = request.form["method"].split("\n")
 
     int_prep = int(request.form["prep"])
     int_cook = int(request.form["cook"])
@@ -107,7 +108,8 @@ def update_recipe(recipe_id):
                             'ingredients': ingredients,
                             'method': method})
 
-    this_recipe = mongo.db.Recipes.find_one({"_id": ObjectId(recipe_id)})                         
+    this_recipe = mongo.db.Recipes.find_one({"_id": ObjectId(recipe_id)})
+                             
     return render_template("fullrecipe.html", recipe=this_recipe)
 
 

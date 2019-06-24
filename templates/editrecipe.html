@@ -7,7 +7,8 @@
         <form action="{{url_for('update_recipe', recipe_id=recipe._id)}}" method="POST" class="col s12">
             <div class="row">
                 <div class="input-field col s12 m6">
-                    <input value="{{recipe.author}}" name="author" id="first_name" type="text" class="validate" required>
+                    <input value="{{recipe.author}}" name="author" id="first_name" type="text" class="validate"
+                        required>
                     <label for="full_name">Your Full Name</label>
                 </div>
             </div>
@@ -74,17 +75,17 @@
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input value="{% for ingredient in recipe.ingredients %} {{ingredient}}. {% endfor %}"
-                        name="ingredients" id="ingredients" type="text" class="validate" required>
-                    <label for="first_name">Ingredients (Please enter each ingredient seperated with a full stop.)</label>
+                    <textarea name="ingredients" id="ingredients" type="text" class="materialize-textarea"
+                        required>{% for ingredient in recipe.ingredients %}{{ingredient}}{% endfor %}</textarea>
+                    <label for="first_name">Ingredients (Please enter each ingredient on a new line.)</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s12">
-                    <input value="{% for method in recipe.method %} {{method}}. {% endfor %}" name="method" id="method"
-                        type="text" class="validate" required>
-                    <label for="method">Method (Please enter each method seperated with a full stop.)</label>
+                    <textarea name="method" id="method" type="text" class="materialize-textarea"
+                        required>{% for method in recipe.method %}{{method}}{% endfor %}</textarea>
+                    <label for="method">Method (Please enter each method on a new line.)</label>
                 </div>
             </div>
 

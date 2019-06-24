@@ -66,6 +66,7 @@ h1, h3 {
   .card:hover {
     background-color: #fafafa;
     transform: rotate(1deg);
+    transition: all 0.30s ease-in-out;
     -moz-transition: all 0.30s ease-in-out;
     -webkit-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out; }
@@ -190,6 +191,7 @@ footer {
   footer a {
     display: inline;
     color: #000; }
+
 /*----------------Media Queries for medium and large screens---------------*/
 @media (min-width: 576px) {
   h1 {
