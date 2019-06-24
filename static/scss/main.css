@@ -181,7 +181,8 @@ form {
 
 /*----------------Footer----------------------*/
 footer {
-  font-size: 16px; }
+  text-align: center;
+  font-size: 17px; }
   footer p {
     margin-right: 10px;
     display: inline;
