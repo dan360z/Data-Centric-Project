@@ -59,9 +59,6 @@ h1, h3 {
   margin: 12px 0;
   overflow: auto;
   white-space: nowrap; }
-  .course-btns-wrapper a {
-    margin: 0 7px;
-    padding: 0 12px; }
 
 /*-------------------Recipe Cards-----------------*/
 .card {
@@ -80,9 +77,8 @@ h1, h3 {
     .card .card-content .card-title {
       font-family: "Kalam", cursive;
       font-weight: 300; }
-    .card .card-content .course {
-      display: block;
-      text-align: center; }
+    .card .card-content .card-image i {
+      margin: 10px auto; }
     .card .card-content p {
       display: inline-block;
       margin: 5px 5px;
@@ -101,6 +97,10 @@ h1, h3 {
   border-radius: 5px;
   padding: 10px;
   font-size: 25px; }
+
+.btn {
+  margin: 0 7px;
+  padding: 0 12px; }
 
 .all, .add {
   background-color: #ffa8e0;
@@ -139,8 +139,20 @@ h1, h3 {
   color: #844747; }
 
 /*----------------Full Recipe Page---------------*/
+.likes-wrapper i {
+  color: #949494;
+  vertical-align: middle;
+  cursor: pointer; }
+.likes-wrapper .favorite {
+  color: #ff4a59;
+  cursor: default; }
+.likes-wrapper p {
+  display: inline;
+  font-size: 18px;
+  font-family: "Kalam", cursive;
+  color: #262626; }
+
 .info-wrapper {
-  padding: 1px 15px;
   border-radius: 10px;
   margin: 55px 0 15px 0; }
   .info-wrapper p {
@@ -167,6 +179,16 @@ form {
   background-color: #fafafa;
   border-radius: 5px; }
 
+/*----------------Footer----------------------*/
+footer {
+  font-size: 16px; }
+  footer p {
+    margin-right: 10px;
+    display: inline;
+    font-family: "Kalam", cursive; }
+  footer a {
+    display: inline;
+    color: #000; }
 /*----------------Media Queries for medium and large screens---------------*/
 @media (min-width: 576px) {
   h1 {

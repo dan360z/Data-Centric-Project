@@ -4,6 +4,10 @@
 
     <!--Recipe Info-->
     <h3>{{recipe.name}}</h3>
+    <div class="likes-wrapper">
+        <a href="{{url_for('like', recipe_id=recipe._id)}}"><i class="likes-btn medium material-icons {{icon}}">{{icon}}</i></a>
+        <p> {{recipe.likes}}</p>
+    </div>
     <div class="info-wrapper">
         <p><span>A recipe by:</span> {{recipe.author}}</p>
         <Hr>

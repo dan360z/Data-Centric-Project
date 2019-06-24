@@ -35,7 +35,7 @@
                 <a href="{{url_for('show_recipe', recipe_id=recipe._id)}}">
                     <div class="card-content">
                         <span class="card-title">{{recipe.name}}</span>
-                        <div class="card-image">
+                        <div class="card-image valign-wrapper">
                             {% if recipe.course_name == 'Breakfast' %}
                             <i class="fas fa-bacon icon breakfast"></i>
                             {% elif recipe.course_name == 'Lunch' %}
@@ -50,9 +50,14 @@
                             <i class="fas fa-cocktail icon beverage"></i>
                             {% endif %}
                         </div>
-                        <p class="course">{{recipe.course_name}}</p>
-                        <p><i class="tiny material-icons">whatshot</i> Calories (kcal): {{recipe.cals}}</p>
-                        <p><i class="tiny material-icons">access_time</i> {{recipe.total_time}}</p>
+                        <div>
+                            <p class="course"><i class="tiny fas fa-utensils"></i> {{recipe.course_name}}</p>
+                            <p class="likes"><i class="tiny material-icons">favorite</i> {{recipe.likes}}</p>
+                        </div>
+                        <div>
+                            <p><i class="tiny material-icons">whatshot</i> Calories (kcal): {{recipe.cals}}</p>
+                            <p><i class="tiny material-icons">access_time</i> {{recipe.total_time}}</p>
+                        </div>
                     </div>
                 </a>
             </div>

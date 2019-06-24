@@ -75,10 +75,6 @@ h1, h3 {
     margin: 12px 0;
     overflow: auto;
     white-space: nowrap;
-    a {
-        margin: 0 7px;
-        padding: 0 12px;
-    }
 }
 
 /*-------------------Recipe Cards-----------------*/
@@ -102,10 +98,11 @@ h1, h3 {
             font-family: $logo-font;
             font-weight: 300;
         }
-        .course {
-            display: block;
-            text-align: center;
+
+        .card-image i{
+            margin: 10px auto;
         }
+
         p {
             display: inline-block;
             margin: 5px 5px;
@@ -130,6 +127,11 @@ h1, h3 {
     border-radius: 5px;
     padding: 10px;
     font-size: 25px;
+}
+
+.btn {
+    margin: 0 7px;
+    padding: 0 12px;
 }
 
 .all, .add {
@@ -178,9 +180,26 @@ h1, h3 {
 }
 /*----------------Full Recipe Page---------------*/
 
+.likes-wrapper {
+    i  {
+        color: $light-text-color;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    .favorite {
+        color: #ff4a59;
+        cursor: default;
+    }
+    p {
+        display: inline;
+        font-size: 18px;
+        font-family: $logo-font;
+        color: $text-color;
+    }
+}
+
+
 .info-wrapper {
-    //background-color: $brand-color;
-    padding: 1px 15px;
     border-radius: 10px;
     margin: 55px 0 15px 0;
     p {
@@ -216,6 +235,21 @@ form {
     margin-top: 55px;
     background-color: #fafafa;
     border-radius: 5px;
+}
+
+/*----------------Footer----------------------*/@at-root
+
+footer {
+    font-size: 16px;
+    p {
+        margin-right: 10px;
+        display: inline;
+        font-family: $logo-font;
+    }
+    a {
+        display: inline;
+        color: #000; 
+    }
 }
 
 /*----------------Media Queries for medium and large screens---------------*/
