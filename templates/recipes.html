@@ -16,12 +16,15 @@
 <!--Filter by Course Buttons-->
 <div class="course-btns-wrapper">
     <a href="{{url_for('get_recipes')}}" class="waves-effect waves-light btn all">All</a>
+    {% for course in courses %}
+    <a href="{{url_for('get_course', course='Breakfast')}}" class="waves-effect waves-light btn {{course.course_name}}">{{course.course_name}}</a>
+    {% endfor %}<!--
     <a href="{{url_for('get_course', course='Breakfast')}}" class="waves-effect waves-light btn breakfast">Breakfast</a>
     <a href="{{url_for('get_course', course='Lunch')}}" class="waves-effect waves-light btn lunch">Lunch</a>
     <a href="{{url_for('get_course', course='Dinner')}}" class="waves-effect waves-light btn dinner">Dinner</a>
     <a href="{{url_for('get_course', course='Desert')}}" class="waves-effect waves-light btn desert">Desert</a>
     <a href="{{url_for('get_course', course='Snack')}}" class="waves-effect waves-light btn snack">Snack</a>
-    <a href="{{url_for('get_course', course='Beverage')}}" class="waves-effect waves-light btn beverage">Beverage</a>
+    <a href="{{url_for('get_course', course='Beverage')}}" class="waves-effect waves-light btn beverage">Beverage</a>-->
 </div>
 <!--/Filter by Course Buttons-->
 <div class="container">
@@ -36,17 +39,17 @@
                         <span class="card-title">{{recipe.name}}</span>
                         <div class="card-image valign-wrapper">
                             {% if recipe.course_name == 'Breakfast' %}
-                            <i class="fas fa-bacon icon breakfast"></i>
+                            <i class="fas fa-bacon icon Breakfast"></i>
                             {% elif recipe.course_name == 'Lunch' %}
-                            <i class="fas fa-apple-alt icon lunch"></i>
+                            <i class="fas fa-apple-alt icon Lunch"></i>
                             {% elif recipe.course_name == 'Dinner' %}
-                            <i class="fas fa-drumstick-bite icon dinner"></i>
+                            <i class="fas fa-drumstick-bite icon Dinner"></i>
                             {% elif recipe.course_name == 'Desert' %}
-                            <i class="fas fa-ice-cream icon desert"></i>
+                            <i class="fas fa-ice-cream icon Desert"></i>
                             {% elif recipe.course_name == 'Snack' %}
-                            <i class="fas fa-cookie icon snack"></i>
+                            <i class="fas fa-cookie icon Snack"></i>
                             {% else %}
-                            <i class="fas fa-cocktail icon beverage"></i>
+                            <i class="fas fa-cocktail icon Beverage"></i>
                             {% endif %}
                         </div>
                         <div>

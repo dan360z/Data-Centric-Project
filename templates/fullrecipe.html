@@ -14,17 +14,17 @@
         <p><i class="prefix fas fa-globe-europe icon cuisine"></i><span>Cuisine:</span> {{recipe.cuisine_name}}</p>
         <Hr>
         <p>{% if recipe.course_name == 'Breakfast' %}
-            <i class="fas fa-bacon icon breakfast"></i>
+            <i class="fas fa-bacon icon Breakfast"></i>
             {% elif recipe.course_name == 'Lunch' %}
-            <i class="fas fa-apple-alt icon lunch"></i>
+            <i class="fas fa-apple-alt icon Lunch"></i>
             {% elif recipe.course_name == 'Dinner' %}
-            <i class="fas fa-drumstick-bite icon dinner"></i>
+            <i class="fas fa-drumstick-bite icon Dinner"></i>
             {% elif recipe.course_name == 'Desert' %}
-            <i class="fas fa-ice-cream icon desert"></i>
+            <i class="fas fa-ice-cream icon Desert"></i>
             {% elif recipe.course_name == 'Snack' %}
-            <i class="fas fa-cookie icon snack"></i>
+            <i class="fas fa-cookie icon Snack"></i>
             {% else %}
-            <i class="fas fa-cocktail icon beverage"></i>
+            <i class="fas fa-cocktail icon Beverage"></i>
             {% endif %}<span>Course:</span> {{recipe.course_name}}</p>
         <Hr>
         <p><i class="tiny material-icons icon prep">access_time</i> <span>Prep:</span> {{recipe.prep}} Mins

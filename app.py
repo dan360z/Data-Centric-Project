@@ -14,7 +14,7 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/get_recipes')
 def get_recipes():
-    return render_template("recipes.html", recipes=mongo.db.Recipes.find())
+    return render_template("recipes.html", recipes=mongo.db.Recipes.find(), courses=mongo.db.Course.find())
 
 
 '''This displays a filtered view of the recipes by the course the user has selected'''
