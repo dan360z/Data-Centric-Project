@@ -30,7 +30,7 @@ def sort_likes():
 @app.route('/get_course/<course>')
 def get_course(course):
     recipes = mongo.db.Recipes.find({"course_name": course})
-    return render_template("recipes.html", recipes=recipes)    
+    return render_template("recipes.html", recipes=recipes, courses=mongo.db.Course.find())    
 
 
 '''This dispalys the full recipe of which the user has clicked'''
