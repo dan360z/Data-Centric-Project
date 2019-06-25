@@ -57,7 +57,11 @@
                         </div>
                         <div>
                             <p class="course"><i class="tiny fas fa-utensils"></i> {{recipe.course_name}}</p>
+                            {% if not recipe.likes %}
+                            <p class="likes"><i class="tiny material-icons">favorite</i> 0</p>
+                            {% else %}
                             <p class="likes"><i class="tiny material-icons">favorite</i> {{recipe.likes}}</p>
+                            {% endif %}
                         </div>
                         <div>
                             <p><i class="tiny material-icons">whatshot</i> Calories (kcal): {{recipe.cals}}</p>
