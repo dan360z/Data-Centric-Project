@@ -14,23 +14,31 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/get_recipes')
 def get_recipes():
-    return render_template("recipes.html", recipes=mongo.db.Recipes.find(), courses=mongo.db.Course.find())
+    recipes_count = mongo.db.Recipes.count()
+    return render_template("recipes.html", recipes=mongo.db.Recipes.find(), courses=mongo.db.Course.find(), recipes_count=recipes_count)
+
 
 '''This sorts the recipes displayed in acending order alphabetically'''
 @app.route('/sort_az')
 def sort_az():
-    return render_template("recipes.html", recipes=mongo.db.Recipes.find().sort("name", 1), courses=mongo.db.Course.find())
+    recipes_count = mongo.db.Recipes.count()
+    return render_template("recipes.html", recipes=mongo.db.Recipes.find().sort("name", 1), courses=mongo.db.Course.find(), recipes_count=recipes_count)
+
 
 '''This sorts the recipes displayed by the ammount of likes each recipe has in decending order'''
 @app.route('/sort_likes')
 def sort_likes():
-    return render_template("recipes.html", recipes=mongo.db.Recipes.find().sort("likes", -1), courses=mongo.db.Course.find())
+    recipes_count = mongo.db.Recipes.count()
+    return render_template("recipes.html", recipes=mongo.db.Recipes.find().sort("likes", -1), courses=mongo.db.Course.find(), recipes_count=recipes_count)
+
 
 '''This displays a filtered view of the recipes by the course the user has selected'''
 @app.route('/get_course/<course>')
 def get_course(course):
     recipes = mongo.db.Recipes.find({"course_name": course})
-    return render_template("recipes.html", recipes=recipes, courses=mongo.db.Course.find())    
+    recipes_count = mongo.db.Recipes.count({"course_name": course})
+
+    return render_template("recipes.html", recipes=recipes, courses=mongo.db.Course.find(), recipes_count=recipes_count)    
 
 
 '''This dispalys the full recipe of which the user has clicked'''

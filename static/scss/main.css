@@ -61,12 +61,19 @@ h1, h3 {
   .sort-wrapper a {
     display: inline;
     font-size: 28px; }
+  .sort-wrapper li a {
+    color: #262626; }
 
 .course-btns-wrapper {
   text-align: center;
   margin: 12px 0;
   overflow: auto;
   white-space: nowrap; }
+
+.recipes-count {
+  text-align: center;
+  font-size: 17px;
+  margin-bottom: 8px; }
 
 /*-------------------Recipe Cards-----------------*/
 .card {

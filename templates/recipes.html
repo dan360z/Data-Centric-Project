@@ -12,13 +12,13 @@
 </div>
 <div class="container sort-wrapper">
     <h5>Recipes</h5>
-
+    <!--Dropdown Materialize-->
     <a class='dropdown-button btn sort right' href='#' data-activates='dropdown1'><i class="material-icons">sort</i></a>
-    <!-- Dropdown Structure -->
     <ul id='dropdown1' class='dropdown-content'>
         <li><a href="{{url_for('sort_az')}}">A-Z</a></li>
         <li><a href="{{url_for('sort_likes')}}">Likes</a></li>
     </ul>
+    <!--/Dropdown Materialize-->
 </div>
 
 <!--Filter by Course Buttons-->
@@ -30,7 +30,12 @@
     {% endfor %}
 </div>
 <!--/Filter by Course Buttons-->
+
 <div class="container">
+    <!--Recipe Count-->
+    <p class="recipes-count">Showing {{recipes_count}} recipes</p>
+    <!--/Recipe Count-->
+
     <!--Recipe Cards-->
     <div class="row">
         {% for recipe in recipes %}
@@ -81,11 +86,13 @@
 
     </div>
     <!--/Recipe Cards-->
+    <!--Create Recipe Button-->
     <div class="row">
         <a href="{{url_for('add_recipe')}}" class="waves-effect waves-light btn add">Add Your Own
             <i class="material-icons right">playlist_add</i>
         </a>
     </div>
+    <!--/Create Recipe Button-->
 </div>
 
 {% endblock %}
