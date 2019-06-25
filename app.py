@@ -16,13 +16,15 @@ mongo = PyMongo(app)
 def get_recipes():
     return render_template("recipes.html", recipes=mongo.db.Recipes.find(), courses=mongo.db.Course.find())
 
+'''This sorts the recipes displayed in acending order alphabetically'''
 @app.route('/sort_az')
 def sort_az():
     return render_template("recipes.html", recipes=mongo.db.Recipes.find().sort("name", 1), courses=mongo.db.Course.find())
 
+'''This sorts the recipes displayed by the ammount of likes each recipe has in decending order'''
 @app.route('/sort_likes')
 def sort_likes():
-    return render_template("recipes.html", recipes=mongo.db.Recipes.find().sort("likes"), courses=mongo.db.Course.find())
+    return render_template("recipes.html", recipes=mongo.db.Recipes.find().sort("likes", -1), courses=mongo.db.Course.find())
 
 '''This displays a filtered view of the recipes by the course the user has selected'''
 @app.route('/get_course/<course>')
