@@ -10,21 +10,24 @@
         <!--/Main logo and introduction-->
     </div>
 </div>
-<div class="container">
+<div class="container sort-wrapper">
     <h5>Recipes</h5>
+
+    <a class='dropdown-button btn sort right' href='#' data-activates='dropdown1'><i class="material-icons">sort</i></a>
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="{{url_for('sort_az')}}">A-Z</a></li>
+        <li><a href="{{url_for('sort_likes')}}">Likes</a></li>
+    </ul>
 </div>
+
 <!--Filter by Course Buttons-->
 <div class="course-btns-wrapper">
     <a href="{{url_for('get_recipes')}}" class="waves-effect waves-light btn all">All</a>
     {% for course in courses %}
-    <a href="{{url_for('get_course', course='Breakfast')}}" class="waves-effect waves-light btn {{course.course_name}}">{{course.course_name}}</a>
-    {% endfor %}<!--
-    <a href="{{url_for('get_course', course='Breakfast')}}" class="waves-effect waves-light btn breakfast">Breakfast</a>
-    <a href="{{url_for('get_course', course='Lunch')}}" class="waves-effect waves-light btn lunch">Lunch</a>
-    <a href="{{url_for('get_course', course='Dinner')}}" class="waves-effect waves-light btn dinner">Dinner</a>
-    <a href="{{url_for('get_course', course='Desert')}}" class="waves-effect waves-light btn desert">Desert</a>
-    <a href="{{url_for('get_course', course='Snack')}}" class="waves-effect waves-light btn snack">Snack</a>
-    <a href="{{url_for('get_course', course='Beverage')}}" class="waves-effect waves-light btn beverage">Beverage</a>-->
+    <a href="{{url_for('get_course', course=course.course_name)}}"
+        class="waves-effect waves-light btn {{course.course_name}}">{{course.course_name}}</a>
+    {% endfor %}
 </div>
 <!--/Filter by Course Buttons-->
 <div class="container">
@@ -80,4 +83,5 @@
         </a>
     </div>
 </div>
+
 {% endblock %}

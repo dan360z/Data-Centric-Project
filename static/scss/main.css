@@ -54,6 +54,14 @@ h1, h3 {
   font-size: 20px;
   padding: 0 30px; }
 
+.sort-wrapper {
+  height: 40px; }
+  .sort-wrapper h5 {
+    display: inline; }
+  .sort-wrapper a {
+    display: inline;
+    font-size: 28px; }
+
 .course-btns-wrapper {
   text-align: center;
   margin: 12px 0;
@@ -119,7 +127,7 @@ h1, h3 {
   background-color: #ffb2a0;
   color: #6a4a43; }
 
-.Desert, .cuisine {
+.Desert, .cuisine, .sort {
   background-color: #c9a0ff;
   color: #5b436a; }
 
@@ -191,6 +199,8 @@ footer {
   footer a {
     display: inline;
     color: #000; }
+    footer a:hover {
+      color: #858585; }
 
 /*----------------Media Queries for medium and large screens---------------*/
 @media (min-width: 576px) {
