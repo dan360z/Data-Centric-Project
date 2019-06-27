@@ -107,7 +107,7 @@ def update_recipe(recipe_id):
 
     ingredients = request.form["ingredients"].split("\n")
     method = request.form["method"].split("\n")
-
+        
     int_prep = int(request.form["prep"])
     int_cook = int(request.form["cook"])
     int_total_time = int_prep + int_cook

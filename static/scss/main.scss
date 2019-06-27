@@ -250,7 +250,7 @@ h1, h3 {
     }
 }
 
-/*----------------Add Recipe Form---------------*/
+/*----------------Add/Edit Recipe Form---------------*/
 
 form {
     margin-top: 55px;
@@ -258,6 +258,15 @@ form {
     border-radius: 5px;
 }
 
+label {
+    font-size: 15px;
+}
+
+textarea {
+    height: 150px;
+    font-size: 13px;
+    resize: none;
+}
 /*----------------Footer----------------------*/
 
 footer {
