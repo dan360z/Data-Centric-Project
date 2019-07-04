@@ -1,233 +1,61 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Kalam:300,400,700&display=swap");
-body {
-  font-family: "Lato", sans-serif;
-  color: #262626; }
+/*
+Error: File to import not found or unreadable: helpers/_mixins.scss.
+        on line 4 of main.scss
 
-/*----------Navigation----------*/
-nav {
-  background-color: #ffffff; }
-  nav .brand-logo {
-    color: #262626;
-    font-size: 28px;
-    font-family: "Kalam", cursive; }
-  nav .nav-wrapper .text-logo {
-    margin-left: 5px;
-    font-size: 25px;
-    color: #262626; }
+1: @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+2: @import url('https://fonts.googleapis.com/css?family=Kalam:300,400,700&display=swap');
+3: @import "helpers/_variables.scss";
+4: @import "helpers/_mixins.scss";
+5: 
+6: body {
+7:     font-family: $primary-font;
+8:     color: $text-color;
+9: }
 
-nav ul a {
-  color: #262626; }
-
-nav .button-collapse i {
-  color: #262626; }
-
-/*-----------------Introduction------------------*/
-.overlay {
-  background-color: rgba(0, 0, 0, 0.4);
-  height: 65vh; }
-
-.background-image {
-  background: url(https://www.sanpellegrino.com/media//international/spyc2019/Sanpellegrino_SPYC_teaser_POST_01.jpg) no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 65vh;
-  margin-bottom: 50px; }
-
-.title {
-  color: #ffffff; }
-  .title span {
-    color: #262626; }
-
-h1, h3 {
-  text-align: center;
-  padding-top: 100px;
-  margin: 0;
-  font-family: "Kalam", cursive; }
-
-h1 {
-  font-size: 50px; }
-
-.intro {
-  color: #ffffff;
-  text-align: center;
-  font-size: 20px;
-  padding: 0 30px; }
-
-.sort-wrapper {
-  height: 40px; }
-  .sort-wrapper h5 {
-    display: inline; }
-  .sort-wrapper a {
-    display: inline;
-    font-size: 28px; }
-  .sort-wrapper li a {
-    color: #262626; }
-
-.course-btns-wrapper {
-  text-align: center;
-  margin: 12px 0;
-  overflow: auto;
-  white-space: nowrap; }
-
-.recipes-count {
-  text-align: center;
-  font-size: 17px;
-  margin-bottom: 8px; }
-
-/*-------------------Recipe Cards-----------------*/
-.card {
-  cursor: pointer; }
-  .card:hover {
-    background-color: #fafafa;
-    transform: rotate(1deg);
-    transition: all 0.30s ease-in-out;
-    -moz-transition: all 0.30s ease-in-out;
-    -webkit-transition: all 0.30s ease-in-out;
-    -o-transition: all 0.30s ease-in-out; }
-  .card .card-content {
-    padding: 10px 24px; }
-    .card .card-content span {
-      color: #262626;
-      text-align: center; }
-    .card .card-content .card-title {
-      font-family: "Kalam", cursive;
-      font-weight: 300; }
-    .card .card-content .card-image i {
-      margin: 10px auto; }
-    .card .card-content p {
-      display: inline-block;
-      margin: 5px 5px;
-      color: #949494; }
-      .card .card-content p i {
-        font-size: 1.3em;
-        vertical-align: sub; }
-    .card .card-content .card-image {
-      text-align: center;
-      font-size: 50px;
-      color: #262626; }
-
-/*----------------Icon and Button Colors---------------*/
-.icon {
-  border: 0.5px solid #2626266b;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 25px; }
-
-.btn {
-  margin: 0 7px;
-  padding: 0 12px; }
-  .btn:hover {
-    background-color: #92c4ff; }
-
-.all, .add {
-  background-color: #ffa8e0;
-  color: #885982; }
-
-.Breakfast, .submit {
-  background-color: #a0ffb9;
-  color: #436a4d; }
-
-.Lunch {
-  background-color: #f5ffa0;
-  color: #656241; }
-
-.Dinner {
-  background-color: #ffb2a0;
-  color: #6a4a43; }
-
-.Desert, .cuisine, .sort {
-  background-color: #c9a0ff;
-  color: #5b436a; }
-
-.Snack {
-  background-color: #f7c990;
-  color: #776940; }
-
-.Beverage, .prep, .edit {
-  background-color: #8defff;
-  color: #508588; }
-
-.cals {
-  background-color: #ffbfbf;
-  color: #ff0101; }
-
-.delete {
-  background-color: #f87575;
-  color: #844747; }
-
-/*----------------Full Recipe Page---------------*/
-h3 {
-  font-size: 40px;
-  margin-bottom: 10px; }
-
-.likes-wrapper i {
-  color: #949494;
-  vertical-align: middle;
-  cursor: pointer; }
-.likes-wrapper .favorite {
-  color: #ff4a59;
-  cursor: default; }
-.likes-wrapper p {
-  display: inline;
-  font-size: 18px;
-  font-family: "Kalam", cursive;
-  color: #262626; }
-
-.info-wrapper {
-  border-radius: 10px;
-  margin: 55px 0 15px 0; }
-  .info-wrapper p {
-    margin: 3px 0; }
-  .info-wrapper span {
-    font-weight: 700; }
-  .info-wrapper i {
-    font-size: 1.3em;
-    vertical-align: sub; }
-
-.instructions {
-  background-color: #fafafa;
-  border-radius: 5px; }
-  .instructions h5 {
-    font-family: "Kalam", cursive; }
-  .instructions li {
-    margin: 8px 0; }
-    .instructions li span {
-      font-weight: 700; }
-
-/*----------------Add/Edit Recipe Form---------------*/
-form {
-  margin-top: 55px;
-  background-color: #fafafa;
-  border-radius: 5px; }
-
-label {
-  font-size: 15px; }
-
-textarea {
-  height: 150px;
-  font-size: 13px;
-  resize: none; }
-
-/*----------------Footer----------------------*/
-footer {
-  text-align: center;
-  font-size: 17px; }
-  footer p {
-    margin-right: 10px;
-    display: inline;
-    font-family: "Kalam", cursive; }
-  footer a {
-    display: inline;
-    color: #000; }
-    footer a:hover {
-      color: #858585; }
-
-/*----------------Media Queries for medium and large screens---------------*/
-@media (min-width: 576px) {
-  h1 {
-    font-size: 60px; } }
-
-/*# sourceMappingURL=main.css.map */
+Backtrace:
+main.scss:4
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:67:in `rescue in import'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:44:in `import'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:28:in `imported_file'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:37:in `css_import?'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:310:in `visit_import'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: helpers/_mixins.scss.\A         on line 4 of main.scss\A \A 1: @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');\A 2: @import url('https://fonts.googleapis.com/css?family=Kalam:300,400,700&display=swap');\A 3: @import \"helpers/_variables.scss\";\A 4: @import \"helpers/_mixins.scss\";\A 5: \A 6: body {\A 7:     font-family: $primary-font;\A 8:     color: $text-color;\A 9: }"; }
