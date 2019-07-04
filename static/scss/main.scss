@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Kalam:300,400,700&display=swap');
 @import "helpers/_variables.scss";
+@import "helpers/_mixins.scss";
 
 body {
     font-family: $primary-font;
@@ -57,10 +58,13 @@ nav .button-collapse i {
 
 h1, h3 {
     text-align: center;
-    font-size: 50px;
     padding-top: 100px;
     margin: 0;
     font-family: $logo-font;
+}
+
+h1 {
+    font-size: 50px;
 }
 
 .intro {
@@ -153,6 +157,9 @@ h1, h3 {
 .btn {
     margin: 0 7px;
     padding: 0 12px;
+    &:hover {
+        background-color: #92c4ff;
+    }
 }
 
 .all, .add {
@@ -199,7 +206,13 @@ h1, h3 {
     background-color: #f87575;
     color: #844747;
 }
+
 /*----------------Full Recipe Page---------------*/
+
+h3 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
 
 .likes-wrapper {
     i  {
@@ -218,7 +231,6 @@ h1, h3 {
         color: $text-color;
     }
 }
-
 
 .info-wrapper {
     border-radius: 10px;
@@ -267,6 +279,7 @@ textarea {
     font-size: 13px;
     resize: none;
 }
+
 /*----------------Footer----------------------*/
 
 footer {

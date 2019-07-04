@@ -43,10 +43,12 @@ nav .button-collapse i {
 
 h1, h3 {
   text-align: center;
-  font-size: 50px;
   padding-top: 100px;
   margin: 0;
   font-family: "Kalam", cursive; }
+
+h1 {
+  font-size: 50px; }
 
 .intro {
   color: #ffffff;
@@ -117,6 +119,8 @@ h1, h3 {
 .btn {
   margin: 0 7px;
   padding: 0 12px; }
+  .btn:hover {
+    background-color: #92c4ff; }
 
 .all, .add {
   background-color: #ffa8e0;
@@ -155,6 +159,10 @@ h1, h3 {
   color: #844747; }
 
 /*----------------Full Recipe Page---------------*/
+h3 {
+  font-size: 40px;
+  margin-bottom: 10px; }
+
 .likes-wrapper i {
   color: #949494;
   vertical-align: middle;

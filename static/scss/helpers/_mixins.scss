@@ -1,0 +1,4 @@
+//-----Hover Color Mixin
+@mixin hoverEffect($color) {
+    background-color: $color + 85;
+}
