@@ -7,7 +7,7 @@
         <form action="{{url_for('insert_recipe')}}" method="POST" class="col s12">
             <div class="row">
                 <div class="input-field col s12 m6">
-                    <input name="author" id="first_name" type="text" class="validate" required>
+                    <input name="author" id="full_name" type="text" class="validate" required>
                     <label for="full_name">Your Full Name</label>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                         {% endfor %}
 
                     </select>
-                    <label>Course</label>
+                    <label for="course">Course</label>
                 </div>
             </div>
             <div class="row">
@@ -41,7 +41,7 @@
                         {% endfor %}
 
                     </select>
-                    <label>Cuisine</label>
+                    <label for="cuisine">Cuisine</label>
                 </div>
             </div>
 
@@ -66,15 +66,15 @@
 
             <div class="row">
                 <div class="col s12">
-                    <label for="first_name">Ingredients (Please enter each ingredient on a new line.)</label>
-                    <textarea name="ingredients" id="ingredients" type="text" required></textarea>
+                    <label for="ingredients">Ingredients (Please enter each ingredient on a new line.)</label>
+                    <textarea name="ingredients" id="ingredients" required></textarea>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col s12">
                     <label for="method">Method (Please enter each method on a new line.)</label>
-                    <textarea name="method" id="method" type="text" required></textarea>
+                    <textarea name="method" id="method" required></textarea>
                 </div>
             </div>
 
@@ -87,5 +87,5 @@
         </form>
         <!--Add Recipe Form-->
     </div>
-
-    {% endblock %}
+</div>
+{% endblock %}

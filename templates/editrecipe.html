@@ -7,7 +7,7 @@
         <form action="{{url_for('update_recipe', recipe_id=recipe._id)}}" method="POST" class="col s12">
             <div class="row">
                 <div class="input-field col s12 m6">
-                    <input value="{{recipe.author}}" name="author" id="first_name" type="text" class="validate"
+                    <input value="{{recipe.author}}" name="author" id="full_name" type="text" class="validate"
                         required>
                     <label for="full_name">Your Full Name</label>
                 </div>
@@ -23,7 +23,7 @@
                 <div class="input-field col s12">
                     <i class="prefix fas fa-utensils icon Dinner"></i>
                     <select id="course" name="course_name">
-                        <option disabled selected>Choose Course</option>
+                        <option disabled>Choose Course</option>
                         {% for course in courses %}
                         {% if course.course_name == recipe.course_name %}
                         <option value="{{course.course_name}}" selected>{{course.course_name}}</option>
@@ -33,14 +33,14 @@
                         {% endfor %}
 
                     </select>
-                    <label>Course</label>
+                    <label for="course">Course</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
                     <i class="prefix fas fa-globe-europe icon cuisine"></i>
                     <select id="cuisine" name="cuisine_name">
-                        <option disabled selected>Choose cuisine</option>
+                        <option disabled>Choose cuisine</option>
                         {% for cuisine in cuisines %}
                         {% if cuisine.cuisine_name == recipe.cuisine_name %}
                         <option value="{{cuisine.cuisine_name}}" selected>{{cuisine.cuisine_name}}</option>
@@ -50,7 +50,7 @@
                         {% endfor %}
 
                     </select>
-                    <label>Cuisine</label>
+                    <label for="cuisine">Cuisine</label>
                 </div>
             </div>
 
@@ -75,8 +75,8 @@
 
             <div class="row">
                 <div class="col s12">
-                    <label for="first_name">Ingredients (Please enter each ingredient on a new line.)</label>
-                    <textarea name="ingredients" id="ingredients" type="text"
+                    <label for="ingredients">Ingredients (Please enter each ingredient on a new line.)</label>
+                    <textarea name="ingredients" id="ingredients"
                         required>{% for ingredient in recipe.ingredients %}{{ingredient}}{% endfor %}</textarea>
                 </div>
             </div>
@@ -84,7 +84,7 @@
             <div class="row">
                 <div class="col s12">
                     <label for="method">Method (Please enter each method on a new line.)</label>
-                    <textarea name="method" id="method" type="text"
+                    <textarea name="method" id="method"
                         required>{% for method in recipe.method %}{{method}}{% endfor %}</textarea>
                 </div>
             </div>
@@ -98,5 +98,5 @@
         </form>
         <!--Edit Recipe Form-->
     </div>
-
-    {% endblock %}
+</div>
+{% endblock %}
