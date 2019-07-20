@@ -23,7 +23,9 @@ def get_recipes():
 def sort_az():
     '''This sorts the recipes displayed in acending order alphabetically'''
     recipes_count = mongo.db.Recipes.count()
-    return render_template("recipes.html", recipes=mongo.db.Recipes.find().sort("name", 1), courses=mongo.db.Course.find(), recipes_count=recipes_count)
+    recipes = mongo.db.Recipes.find().sort("name", -1)
+    
+    return render_template("recipes.html", recipes=recipes, courses=mongo.db.Course.find(), recipes_count=recipes_count)
 
 
 @app.route('/sort_likes_ascending')
