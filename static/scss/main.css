@@ -65,6 +65,9 @@ h1 {
     font-size: 28px; }
   .sort-wrapper li a {
     color: #262626; }
+    .sort-wrapper li a i {
+      margin: 0 0 0 5px;
+      float: none; }
 
 .course-btns-wrapper {
   text-align: center;

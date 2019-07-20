@@ -16,7 +16,8 @@
     <a class='dropdown-button btn sort right' href='#' data-activates='dropdown1'><i class="material-icons">sort</i></a>
     <ul id='dropdown1' class='dropdown-content'>
         <li><a href="{{url_for('sort_az')}}">A-Z</a></li>
-        <li><a href="{{url_for('sort_likes')}}">Likes</a></li>
+        <li><a href="{{url_for('sort_likes_descending')}}">Likes<i class="tiny material-icons">arrow_downward</i></a></li>
+        <li><a href="{{url_for('sort_likes_ascending')}}">Likes<i class="tiny material-icons">arrow_upward</i></a></li>
     </ul>
     <!--/Dropdown Materialize-->
 </div>
