@@ -214,6 +214,21 @@ textarea {
   font-size: 13px;
   resize: none; }
 
+/*----------------Delete Recipe Modal----------------------*/
+.modal .modal-content {
+  padding: 24px 24px 0px 24px;
+  text-align: center; }
+  .modal .modal-content h4 {
+    font-family: "Kalam", cursive; }
+  .modal .modal-content p {
+    font-size: 16.5px; }
+
+.modal-close:hover {
+  background-color: #a0ffb9; }
+
+#delete:hover {
+  background-color: #f87575; }
+
 /*----------------Footer----------------------*/
 footer {
   text-align: center;

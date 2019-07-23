@@ -283,6 +283,27 @@ textarea {
     resize: none;
 }
 
+/*----------------Delete Recipe Modal----------------------*/
+
+.modal .modal-content {
+    padding: 24px 24px 0px 24px;
+    text-align: center;
+    h4 {
+        font-family: $logo-font;
+    }
+    p {
+        font-size: 16.5px;
+    }
+}
+
+.modal-close:hover {
+    background-color: #a0ffb9;
+}
+
+#delete:hover {
+    background-color: #f87575;
+}
+
 /*----------------Footer----------------------*/
 
 footer {
