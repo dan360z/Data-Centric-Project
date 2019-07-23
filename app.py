@@ -21,9 +21,9 @@ def get_recipes():
 
 @app.route('/sort_az')
 def sort_az():
-    '''This sorts the recipes displayed in acending order alphabetically'''
+    '''This sorts the recipes alphabetically ascending'''
     recipes_count = mongo.db.Recipes.count()
-    recipes = mongo.db.Recipes.find().sort("name", -1)
+    recipes = mongo.db.Recipes.find().sort("lowercase_name", 1)
     
     return render_template("recipes.html", recipes=recipes, courses=mongo.db.Course.find(), recipes_count=recipes_count)
 
@@ -84,8 +84,11 @@ def insert_recipe():
     int_cook = int(request.form["cook"])
     int_total_time = int_prep + int_cook
     total_time = str(int_total_time)
+
+    lowercaseName = request.form["name"].lower()
     
-    mongo.db.Recipes.insert_one({'name': request.form["name"],
+    mongo.db.Recipes.insert_one({'lowercase_name': lowercaseName,
+                                'name': request.form["name"],
                                 'author': request.form["author"],
                                 'cuisine_name': request.form["cuisine_name"],
                                 'course_name': request.form["course_name"],
@@ -118,9 +121,11 @@ def update_recipe(recipe_id):
     int_cook = int(request.form["cook"])
     int_total_time = int_prep + int_cook
     total_time = str(int_total_time)
+    lowercaseName = request.form["name"].lower()
 
     mongo.db.Recipes.update({'_id': ObjectId(recipe_id)},
-                            {'name': request.form["name"],
+                            {'lowercase_name': lowercaseName,
+                            'name': request.form["name"],
                             'author': request.form["author"],
                             'cuisine_name': request.form["cuisine_name"],
                             'course_name': request.form["course_name"],
