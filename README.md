@@ -20,6 +20,10 @@ This web application will be for users who want to store their own recipes and v
 
 ### Wireframes
 
+- [Desktop/Mobile Wireframes **All Recipes Page**](wireframes\recipes.html.jpg)
+- [Desktop/Mobile Wireframes **Full Recipe Page**](wireframes\fullrecipe.html.jpg)
+- [Desktop/Mobile Wireframes **Add and Edit Recipes Page**](wireframes\addeditrecipe.html.jpg)
+
 ---
 
 ## Features
@@ -142,7 +146,7 @@ Here are the steps for local deployment:
 - Install all requirements from the requirements.txt file using this command:
     - `sudo pip3 -r requirements.txt`
 
-- Create an environment variable on your machine or in a `.env` file for 'MONGO_URI', remember to reference the .env file in a `.gitignore` file. The key and value pair will be:
+- Create an environment variable on your machine or in a `.env` file for 'MONGO_URI', remember to reference the `.env` file in a `.gitignore` file. The key and value pair will be:
     - MONGO_URI : `'connection string' (This connection string will be given to you by mongoDB when you have created a cluster by clicking on the connect button.)`.
 
 - Sign up for an account on [MongoDB](https://www.mongodb.com) and create a Cluster, inside that Cluster create a Database called RecipeBook. The Collections in that Recipe should be as follows:
