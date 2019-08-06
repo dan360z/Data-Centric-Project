@@ -1,6 +1,6 @@
 # Data Centric Milestone Project - Recipe Book
 
-Welcome to my data centric milestone project. For this project I created an online cookbook, a web application allows users to easily view, create,update and delete recipes.
+Welcome to my data centric milestone project, for this project I created an online cookbook, that allows users to easily view, create, update and delete recipes.
 
 ---
 
@@ -137,12 +137,13 @@ Here are the steps for local deployment:
 - Clone or download this repository by clicking the green 'Clone or download' button and unzipping the file that is downloaded, or you can enter the following into your Git CLI terminal:
     - `git clone https://github.com/dan360z/Data-Centric-Project.git` 
 
-- Navigate to the directory where you unpacked the files if you are not already there.    
+- Navigate to the directory where you unpacked the files if you are not already there. 
+
 - Install all requirements from the requirements.txt file using this command:
     - `sudo pip3 -r requirements.txt`
 
-- Create an environment variable on your machine for 'MONGO_URI'. The key and value pair will be:
-    - 'MONGO_URI' : `'connection string' (This connection string will be given to you by mongoDB after creating your cluster)`.
+- Create an environment variable on your machine or in a `.env` file for 'MONGO_URI', remember to reference the .env file in a `.gitignore` file. The key and value pair will be:
+    - MONGO_URI : `'connection string' (This connection string will be given to you by mongoDB when you have created a cluster by clicking on the connect button.)`.
 
 - Sign up for an account on [MongoDB](https://www.mongodb.com) and create a Cluster, inside that Cluster create a Database called RecipeBook. The Collections in that Recipe should be as follows:
 
@@ -159,7 +160,6 @@ cuisine_name: <string>
 #### Recipes
 ```
 _id: <ObjectId>
-
 lowercase_name: <string>
 name: <string>
 author: <string>
