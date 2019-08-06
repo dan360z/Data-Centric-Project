@@ -82,7 +82,7 @@
             <p>Are you sure you want to delete this recipe?</p>
         </div>
         <div class="modal-footer">
-            <a class="modal-action modal-close waves-effect waves-green btn-flat">No</a>
+            <a class="modal-action modal-close waves-effect waves-green btn-flat" id="cancel">No</a>
             <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" id="delete" class="modal-action modal-close waves-effect waves-green btn-flat">Yes, I'm sure</a>
         </div>
     </div>

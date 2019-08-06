@@ -296,12 +296,18 @@ textarea {
     }
 }
 
-.modal-close:hover {
+#cancel {
     background-color: #a0ffb9;
+    &:hover {
+        background-color: #6dcb85;
+    }
 }
 
-#delete:hover {
+#delete {
     background-color: #f87575;
+    &:hover {
+        background-color: #c34343;
+    }
 }
 
 /*----------------Footer----------------------*/

@@ -223,11 +223,15 @@ textarea {
   .modal .modal-content p {
     font-size: 16.5px; }
 
-.modal-close:hover {
+#cancel {
   background-color: #a0ffb9; }
+  #cancel:hover {
+    background-color: #6dcb85; }
 
-#delete:hover {
+#delete {
   background-color: #f87575; }
+  #delete:hover {
+    background-color: #c34343; }
 
 /*----------------Footer----------------------*/
 footer {
