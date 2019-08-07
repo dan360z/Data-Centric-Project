@@ -20,9 +20,9 @@ This web application will be for users who want to store their own recipes and v
 
 ### Wireframes
 
-- [Desktop/Mobile Wireframes **All Recipes Page**](assets/wireframes\recipes.html.jpg)
-- [Desktop/Mobile Wireframes **Full Recipe Page**](assets/wireframes\fullrecipe.html.jpg)
-- [Desktop/Mobile Wireframes **Add and Edit Recipes Page**](assets/wireframes\addeditrecipe.html.jpg)
+- [Desktop/Mobile Wireframes **All Recipes Page**](https://github.com/dan360z/Data-Centric-Project/blob/master/static/wireframes/add-edit-recipe.jpg?raw=true)
+- [Desktop/Mobile Wireframes **Full Recipe Page**](https://github.com/dan360z/Data-Centric-Project/blob/master/static/wireframes/full-recipe.jpg?raw=true)
+- [Desktop/Mobile Wireframes **Add and Edit Recipes Page**](https://github.com/dan360z/Data-Centric-Project/blob/master/static/wireframes/recipes.jpg?raw=true)
 
 ---
 
